@@ -1,25 +1,18 @@
-**************
-arribada_tools
-**************
+# Arribada Horizon
 
-Python tools for provisioning Arribada tracker devices.
+## Arribada Horizon Bio-Logging Platform
 
-Installation
-============
+The **Arribada Horizon** bio-logging platform provides the building blocks necessary to develop customised bio-logging tags. Essential functionality is included as standard (GPS, Tri-axial accelerometer, Bluetooth 5). In addition, a picoblade expansion socket allows third party radio modules / additional daughterboards to be connected as required.
 
-Install the python library by running:
+The platform was developed by the [Arribada Initiative](http://arribada.org) and the [Zoological Society of London](https://www.zsl.org/conservation/how-we-work/conservation-technology) to unlock access to low-cost open source bio-logging technology.
 
-    python setup.py install
+There are currently two releases;
 
+- **Arribada Horizon v2.0** (STM32 based)
+- **Arribada Horizon v3.0** (nRF52840 based)
 
-Project resources
-=================
+### Arribada Horizon 3.0 ###
 
+This repository contains the python tools which allow users to configure and interact with V3 tags, using the firmware found in [this repository](https://github.com/arribada/horizon-v3-firmware).
 
-Changelog
-=========
-
-v0.1.0
-------
-
-- First attempt.
+Usage described in [wiki](https://github.com/arribada/horizon-v3-tools/wiki).
