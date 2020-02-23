@@ -53,6 +53,7 @@ setup(
         'tests/ble_auto',
         'tests/aws_config',
         'tests/cellular_config',
+        'tests/argos_parse',
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',

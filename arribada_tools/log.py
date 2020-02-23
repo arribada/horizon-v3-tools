@@ -38,6 +38,7 @@ def decode(data, offset):
 
     return cfg
 
+
 def decode_all(data):
     """Iteratively decode an input data buffer to a list of log
     objects.

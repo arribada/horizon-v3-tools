@@ -8,7 +8,7 @@ import datetime
 import dateutil.parser
 
 
-__version__ = 5
+__version__ = 6
 
 logger = logging.getLogger(__name__)
 
@@ -1211,7 +1211,7 @@ class ConfigItem_IOT_Satellite(ConfigItem):
     tag = 0x0A10
     path = 'iot.satellite'
     params = ['enable', 'connectionPriority', 'statusFilter', 'minUpdates',
-              'maxInterval', 'minInterval', 'randomizedTxWindow']
+              'maxInterval', 'minInterval', 'randomizedTxWindow', 'testModeEnable']
     json_params = params
 
     # The order of these allowed filter options must match the bit-field order as
@@ -1236,7 +1236,7 @@ class ConfigItem_IOT_Satellite(ConfigItem):
     }
 
     def __init__(self, **kwargs):
-        ConfigItem.__init__(self, b'?BIBIIB', self.params, **kwargs)
+        ConfigItem.__init__(self, b'?BIBIIB?', self.params, **kwargs)
         if not hasattr(self, 'enable'):
             self.enable = True
         if not hasattr(self, 'connectionPriority'):
@@ -1249,6 +1249,8 @@ class ConfigItem_IOT_Satellite(ConfigItem):
             self.minInterval = 0     # Means disable
         if not hasattr(self, 'randomizedTxWindow'):
             self.randomizedTxWindow = 0
+        if not hasattr(self, 'testModeEnable'):
+            self.testModeEnable = 0     # Means disable
 
     def pack(self):
         

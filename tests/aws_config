@@ -174,7 +174,7 @@ try:
         logger.info('Saving certificate and key files for %s', args.register_thing)
         save_crypto(args.register_thing, cert_key)
         logger.info('Creating default device shadow %s', args.register_thing)
-        retries = 3
+        retries = 10
         while True:
             try:
                 create_shadow(args.register_thing)
